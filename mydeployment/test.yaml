@@ -9,6 +9,8 @@ spec:
   containers:
   - image: nginx
     name: argo-nginx
+  - image: alpine
+    name: alpine-linux
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
