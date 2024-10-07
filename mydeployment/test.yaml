@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: argo-nginx
-  name: argo-nginx
+    run: argo-alpine
+  name: argo-alpine
 spec:
   containers:
   - image: nginx
