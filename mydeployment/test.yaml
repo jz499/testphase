@@ -22,6 +22,6 @@ spec:
         name: alpine
       - image: nginx
         name: nginx
-
+        command: ["sh", "-c", "sleep 900"]
         resources: {}
 status: {}
