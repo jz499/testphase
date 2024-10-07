@@ -1,15 +1,27 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: dep2
+  labels:
+    app: dep3
+  name: dep3
 spec:
-  containers:
-  - image: nginx
-    name: argo-nginx
-  - image: alpine
-    name: alpine-linux
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep3
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dep3
+    spec:
+      containers:
+      - image: alpine
+        name: alpine
+      - image: nginx
+        name: nginx
+
+        resources: {}
 status: {}
