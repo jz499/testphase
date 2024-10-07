@@ -2,9 +2,7 @@ apiVersion: v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  labels:
-    run: argo-alpine
-  name: argo-alpine
+  name: dep2
 spec:
   containers:
   - image: nginx
